@@ -20,6 +20,8 @@ const skills = [
 const happy = true;
 const finished = false;
 const goal = 3;
+
+const skillColor = "navy";
 ---
 
 <Layout title="Sobre mi">
@@ -54,7 +56,7 @@ const goal = 3;
     </ul>
     <p>Mis habilidades son:</p>
     <ul>
-      {skills.map((skills) => <li>{skills}</li>)}
+      {skills.map((skills) => <li class="skills">{skills}</li>)}
     </ul>
     {happy && <p>¡Estoy feliz de aprender Astro!</p>}
 
@@ -69,3 +71,14 @@ const goal = 3;
     }
   </main>
 </Layout>
+<style define:vars={{ skillColor }}>
+  h1 {
+    color: purple;
+    font-size: 4em;
+  }
+  .skills {
+    color: green;
+    color: var(--skillColor);
+    font-weight: bold;
+  }
+</style>
