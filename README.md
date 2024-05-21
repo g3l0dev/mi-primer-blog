@@ -1,2 +1,2 @@
-> [!importan]
+> [!important]
 >esto es una cita
